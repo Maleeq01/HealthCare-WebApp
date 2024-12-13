@@ -1,0 +1,176 @@
+/* Main App Container */
+.app {
+  display: flex;
+  height: 100vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #cbc6c6be;
+  color: #333;
+}
+
+.sidebar-title {
+  text-align: center;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px 0 0 15px;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+
+/* Facility Type Filters */
+.type-filters button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.type-filters button.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Theme Toggle */
+.theme-toggle label {
+  margin-right: 15px;
+}
+
+/* Enhanced Light Theme */
+.app.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.app.light .sidebar {
+  background-color: #f9f9f9;
+}
+
+.app.light .search-bar input,
+.app.light .type-filters button {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Enhanced Dark Theme */
+.app.dark {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.app.dark .sidebar {
+  background-color: #222222;
+  color: #e0e0e0;
+}
+
+.app.dark .search-bar input,
+.app.dark .type-filters button {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #444444;
+}
+
+.app.dark .type-filters button.selected {
+  background-color: #008cff;
+  color: white;
+}
+
+/* Map and Marker Customizations */
+.leaflet-container {
+  background: #333;
+}
+
+.marker-user {
+  background-color: #00aaff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.marker-hospital {
+  background-color: #ff4b4b;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.marker-clinic {
+  background-color: #4bff4b;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.marker-laboratory {
+  background-color: #4b4bff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+/* Popup Custom Styling for Dark Mode */
+.leaflet-popup-content-wrapper {
+  background: #222;
+  color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.leaflet-popup-content-wrapper .leaflet-popup-content {
+  color: #e0e0e0;
+}
+
+/* Add these styles at the end of the file */
+.marker-cluster-small {
+  background-color: rgba(181, 226, 140, 0.6);
+}
+
+.marker-cluster-small div {
+  background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+  background-color: rgba(241, 211, 87, 0.6);
+}
+
+.marker-cluster-medium div {
+  background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+  background-color: rgba(253, 156, 115, 0.6);
+}
+
+.marker-cluster-large div {
+  background-color: rgba(241, 128, 23, 0.6);
+}
