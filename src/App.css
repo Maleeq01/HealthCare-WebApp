@@ -174,3 +174,198 @@
 .marker-cluster-large div {
   background-color: rgba(241, 128, 23, 0.6);
 }
+
+/* Add these responsive styles at the end of App.css */
+
+/* Tablet and smaller desktop screens */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+    padding: 15px;
+  }
+
+  .search-bar input {
+    font-size: 14px;
+  }
+
+  .type-filters button {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile devices in landscape */
+@media screen and (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .main-content {
+    height: 60vh;
+  }
+
+  .search-bar {
+    margin-bottom: 10px;
+  }
+
+  .type-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .type-filters button {
+    margin: 0;
+    flex: 1 1 auto;
+    min-width: 80px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile devices in portrait */
+@media screen and (max-width: 480px) {
+  .sidebar {
+    max-height: 45vh;
+    padding: 8px;
+  }
+
+  .main-content {
+    height: 55vh;
+  }
+
+  .sidebar-title {
+    font-size: 1.2em;
+    margin: 5px 0;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .type-filters button {
+    padding: 3px 6px;
+    min-width: 70px;
+    font-size: 11px;
+  }
+
+  /* Adjust popup content for better mobile viewing */
+  .leaflet-popup-content {
+    margin: 10px;
+    font-size: 12px;
+  }
+
+  .leaflet-popup-content h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Handle very small screens */
+@media screen and (max-width: 320px) {
+  .sidebar {
+    max-height: 50vh;
+  }
+
+  .main-content {
+    height: 50vh;
+  }
+
+  .sidebar-title {
+    font-size: 1.1em;
+  }
+
+  .type-filters button {
+    min-width: 60px;
+    font-size: 10px;
+  }
+}
+
+/* Handle landscape orientation specifically */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .app {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    max-height: none;
+  }
+
+  .main-content {
+    height: 100vh;
+    flex: 1;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .type-filters {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .type-filters button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Ensure minimum touch target sizes */
+@media (pointer: coarse) {
+  .type-filters button,
+  .search-bar button {
+    min-height: 44px;
+  }
+
+  .leaflet-control-zoom a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Dark mode adjustments for better contrast on mobile */
+@media screen and (max-width: 768px) {
+  .app.dark .sidebar {
+    background-color: #1a1a1a;
+  }
+
+  .app.dark .search-bar input,
+  .app.dark .type-filters button {
+    background-color: #2a2a2a;
+  }
+
+  .app.dark .leaflet-popup-content-wrapper {
+    background-color: #1a1a1a;
+  }
+}
+
+/* Print styles */
+@media print {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%;
+    height: 100vh;
+  }
+}
